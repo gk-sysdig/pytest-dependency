@@ -22,15 +22,15 @@ try:
 except (ImportError, AttributeError):
     cmdclass = dict()
 try:
-    import gitprops
-    release = str(gitprops.get_last_release())
-    version = str(gitprops.get_version())
+    #import gitprops
+    release = "pr_temp_release"
+    version = "0.1"
 except (ImportError, LookupError):
     try:
         from _meta import release, version
     except ImportError:
         log.warn("warning: cannot determine version number")
-        release = version = "UNKNOWN"
+        release = version = "2.0"
 
 docstring = __doc__
 
